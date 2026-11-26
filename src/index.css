@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Poppins', system-ui, sans-serif;
+  --color-accent: #4F46E5;
+  --color-accent-soft: #EEF2FF;
+}
+
+html { font-family: var(--font-sans); }
+body { background-color: #FAFAF9; color: #181818; }
+h1, h2, h3 { text-wrap: balance; }
+p, span, label { text-wrap: pretty; }
+button, a, input, select, textarea { transition-timing-function: cubic-bezier(0.22,1,0.36,1); }
+button:active, a:active { transform: scale(0.98); }
+:focus-visible { outline: 2px solid #4F46E5; outline-offset: 2px; }
+.hero-gradient { background: linear-gradient(to left, #FFFFFF, #9B9B9B); -webkit-background-clip: text; background-clip: text; color: transparent; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}
